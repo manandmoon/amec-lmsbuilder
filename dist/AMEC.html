@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://amec.local/#/video -->
+<html ng-app="ngBoilerplate" id="ng-app" ng-controller="AppCtrl" class="js flexbox flexboxlegacy canvas canvastext postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache ng-scope"><script src="./AMEC_files/cb=gapi.loaded_0" async=""></script><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
+    <title ng-bind="pageTitle" class="ng-binding">AMEC</title>
+
+    <!-- social media tags -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- font awesome from BootstrapCDN -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS -->
+    <link rel="stylesheet" type="text/css" href="./AMEC_files/ngbp-0.3.2.css">
+
+    <!-- compiled JavaScript -->
+    <script type="text/javascript" src="./AMEC_files/modernizr.js"></script>
+    <script type="text/javascript" src="./AMEC_files/angular.js"></script>
+    <script type="text/javascript" src="./AMEC_files/angular-animate.min.js"></script>
+    <script type="text/javascript" src="./AMEC_files/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="./AMEC_files/angular-placeholders-0.0.1-SNAPSHOT.min.js"></script>
+    <script type="text/javascript" src="./AMEC_files/angular-ui-router.js"></script>
+    <script type="text/javascript" src="./AMEC_files/app.js"></script>
+    <script type="text/javascript" src="./AMEC_files/controller.js"></script>
+    <script type="text/javascript" src="./AMEC_files/directives.js"></script>
+    <script type="text/javascript" src="./AMEC_files/filters.js"></script>
+    <script type="text/javascript" src="./AMEC_files/services.js"></script>
+    <script type="text/javascript" src="./AMEC_files/video.js"></script>
+    <script type="text/javascript" src="./AMEC_files/plusOne.js"></script>
+    <script type="text/javascript" src="./AMEC_files/templates-common.js"></script>
+    <script type="text/javascript" src="./AMEC_files/templates-app.js"></script>
+
+     <script type="text/javascript" src="./AMEC_files/popcorn-ie8.js"></script>
+
+     <script type="text/javascript" src="./AMEC_files/infoData.json"></script>
+     <script type="text/javascript" src="./AMEC_files/questionData.json"></script>
+
+    <!-- it's stupid to have to load it here, but this is for the +1 button -->
+    <script type="text/javascript" src="./AMEC_files/plusOne(1).js" gapi_processed="true">
+      { "parsetags": "explicit" }
+    </script>
+  </head>
+  <body>
+    <article>
+      <!-- uiView: main --><div class="container ng-scope" ui-view="main"><div headersection="" class="ng-scope ng-isolate-scope"><header ng-show="isShown()" ng-init="true" class="" style="">
+  <img class="logo" src="./AMEC_files/logo.gif">
+  <h1 class="ng-binding">AMEC - Tax</h1>
+  <a class="back" href="http://amec.local/#" ng-click="closeHeader()">×</a>
+  <div class="progress" style="width: 1.9809128024403604%;"></div>
+</header></div>
+
+<section id="player" class="overlay ng-scope">
+  <div overlay="" class="ng-isolate-scope"><div class="overlays" ng-init="true">
+    <div class="rewatch ng-hide" ng-animate="&#39;animate&#39;" ng-show="isShown(&#39;rewatch&#39;)">
+      <div class="action ">
+        Rewatch Section
+      </div>
+    </div>
+
+    <div class="play ng-hide" ng-show="isShown(&#39;begin&#39;)" style="">
+      <div class="action green" ng-click="toggleVideoStart()">
+        Begin
+      </div>
+    </div>
+    <div class="info nobg" ng-show="isShown(&#39;more&#39;)" style="">
+      <div class="action small ng-binding" ng-click="showMoreInfoClick()">
+        More
+      </div>
+    </div>
+    <div class="section-end nobg" ng-show="isShown(&#39;sectionquestions&#39;)" style="">
+      <div class="center">
+        Section Questions
+      </div>
+    </div>
+  </div></div>
+  <div uivideo="" control="uivideoControl" class="ng-isolate-scope"><!-- <video id="mainplayer" class="video-js vjs-default-skin {{videoControl.videoId}}" preload="auto" ng-click="toggleVideoState()">
+	<source  type="video/mp4" src="{{videoControl.videoSrc}}" />
+		Your browser does not support the video tag.
+</video> -->
+
+<!-- "Video For Everybody" http://camendesign.com/code/video_for_everybody -->
+<video id="mainplayer" class="video-js vjs-default-skin video-733" preload="auto" ng-click="toggleVideoState()">
+	<source type="video/mp4" src="assets/AMEC-1.mp4">
+	<object type="application/x-shockwave-flash" data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="640" height="360">
+		<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+		<param name="allowFullScreen" value="true">
+		<param name="wmode" value="transparent">
+		<param name="flashVars" value="config={&#39;playlist&#39;:[&#39;http%3A%2F%2Fsandbox.thewikies.com%2Fvfe-generator%2Fimages%2Fbig-buck-bunny_poster.jpg&#39;,{&#39;url&#39;:&#39;assets/AMEC-1.mp4&#39;,&#39;autoPlay&#39;:false}]}">
+		<img alt="Big Buck Bunny" src="./AMEC_files/big-buck-bunny_poster.jpg" width="640" height="360" title="No video playback capabilities, please download the video below">
+	</object>
+</video></div>
+</section>
+
+<div moreinfo="" class="ng-scope ng-isolate-scope"><section id="more-info" ng-init="moreinfoControl.moreinfoArray">
+	<!-- ngRepeat: moreinfoContent in moreinfoControl.moreinfoArray --><div class="info-box ng-scope ng-hide" ng-repeat="moreinfoContent in moreinfoControl.moreinfoArray" ng-show="isShown(0)">
+		 <p ng-bind-html="moreinfoContent.text | to_trusted" class="ng-binding">test</p>
+	</div><!-- end ngRepeat: moreinfoContent in moreinfoControl.moreinfoArray --><div class="info-box ng-scope ng-hide" ng-repeat="moreinfoContent in moreinfoControl.moreinfoArray" ng-show="isShown(1)">
+		 <p ng-bind-html="moreinfoContent.text | to_trusted" class="ng-binding">test1</p>
+	</div><!-- end ngRepeat: moreinfoContent in moreinfoControl.moreinfoArray --><div class="info-box ng-scope ng-hide" ng-repeat="moreinfoContent in moreinfoControl.moreinfoArray" ng-show="isShown(2)">
+		 <p ng-bind-html="moreinfoContent.text | to_trusted" class="ng-binding">test2</p>
+	</div><!-- end ngRepeat: moreinfoContent in moreinfoControl.moreinfoArray -->
+</section></div>
+<div questions="" class="ng-scope ng-isolate-scope"><section id="content" ng-init="true">
+
+		
+			<!-- ngRepeat: quiz in questionsControl.questionArray --><div class="quiz ng-scope" ng-repeat="quiz in questionsControl.questionArray" ng-init="true" ng-show="isShownParent($index)" style="">
+
+				<h2 class="ng-binding">Exercise 1</h2>
+					<!-- ngRepeat: question in quiz.questions --><div class="row question ng-scope" ng-repeat="question in quiz.questions" ng-init="true" ng-show="isShown($index)">
+						<form name="quiz1" class="ng-pristine ng-valid">
+							<div class="half ng-binding"></div>
+							<div class="half last" ng-switch="" on="question.type">
+								<!-- ngSwitchWhen: text --><input ng-switch-when="text" ng-model="question.model" name="Question 10" id="Question 10" type="text" class="ng-scope ng-pristine ng-valid">
+								<!-- ngSwitchWhen: checkbox -->
+								<!-- ngSwitchWhen: radio -->
+							</div>
+							<button type="submit" ng-click="checkAnswer(question.model, $parent.$index, $index, question.type)" class="submit">Check Answer</button>
+							<div class="correction ng-binding ng-hide" ng-show="showCorrection()"></div>
+							<div class="clear"></div>
+						</form>
+					</div><!-- end ngRepeat: question in quiz.questions -->
+				<div class="clear"></div>
+			</div><!-- end ngRepeat: quiz in questionsControl.questionArray -->
+
+			<div class="video-complete ng-hide" ng-show="showVideoComplete()">
+				<h2>Module Complete</h2>
+				<div class="the-end-box">
+					You have now completed the module. Please continue to be returned to the LMS<br>
+					<a class="continueButton">
+						Continue
+					</a>
+				</div>
+			</div>
+
+		</section>
+		<div class="">
+		<div class="center">
+			
+		</div>
+	</div>
+
+	</div>
+</div>
+
+      <footer class="footer">
+        
+      </footer>
+    </article>
+  
+
+<div id="window-resizer-tooltip"><a href="http://amec.local/#" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a><span class="tooltipTitle">Window size: </span><span class="tooltipWidth" id="winWidth"></span> x <span class="tooltipHeight" id="winHeight"></span><br><span class="tooltipTitle">Viewport size: </span><span class="tooltipWidth" id="vpWidth"></span> x <span class="tooltipHeight" id="vpHeight"></span></div></body></html>

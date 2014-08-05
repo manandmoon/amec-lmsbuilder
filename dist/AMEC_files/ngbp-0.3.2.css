@@ -1,0 +1,724 @@
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+/**
+ * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
+ * project should be imported as the rest are just wasting space.
+ */
+/*@import '../../vendor/bootstrap/less/bootstrap.less';*/
+/**
+ * This is our main variables file. We must include it last so we can overwrite any variable
+ * definitions in our imported stylesheets.
+ */
+/*
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
+}
+
+code, pre, .pre {
+  padding: 5px;
+  margin: 10px 0;
+  background-color: #EFEFEF;
+  border: 1px solid #DADADA;
+  border-radius: 3px;
+}
+
+code {
+  padding: 0 3px;
+}
+
+pre {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.page-header {
+  margin-top: 60px;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+
+h2 {
+  margin: 20px 0;
+  color: #666;
+}
+
+
+
+.navbar {
+  margin-top: 20px;
+  
+  small {
+    font-size: 60%;
+  }
+}
+
+
+
+.footer {
+  margin-top: 80px;
+
+  .footer-inner {
+    padding: 40px 0;
+    border-top: 1px solid #DDD;
+  }
+
+  .social {
+    float: right;
+    margin: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 20px;
+
+      a, a:visited {
+        color: @gray-light;
+        text-decoration: none;
+        font-size: 40px;
+        .transition( 250ms ease-in-out );
+
+        &:hover {
+          color: @gray;
+        }
+      }
+    }
+  }
+}*/
+/**
+ * Now that all app-wide styles have been applied, we can load the styles for
+ * all the submodules and components we are using. 
+ *
+ * TODO: In a later version of this boilerplate, I'd like to automate this.
+ */
+body {
+  font-family: Lato, sans-serif;
+  background: #232830;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1.5em;
+  padding-top: 50px;
+}
+article {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.clear {
+  clear: both;
+}
+header {
+  text-align: center;
+  background: white;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  width: 100%;
+  -webkit-transition: all 0.5s;
+  -webkit-transform: translateY(0px);
+  opacity: 1;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+header.ng-hide-add,
+header.ng-hide-remove {
+  display: block !important;
+}
+header.ng-hide {
+  opacity: 0;
+  -webkit-transform: translateY(-40px);
+}
+header .logo {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+  height: 30px;
+}
+header a {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 2em;
+  color: darkgrey;
+  text-decoration: none;
+}
+header h1 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #414141;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+header .progress {
+  height: 5px;
+  background: #3F91D1;
+  width: 0%;
+  -webkit-transition: all 0.3s;
+}
+#player {
+  position: relative;
+  text-align: center;
+}
+#player #mainplayer {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+#player .overlays {
+  z-index: 999;
+}
+#player .overlays > div {
+  position: absolute;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid gray;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+  -webkit-transition: all 1s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#player .overlays > div.info {
+  pointer-events: none !important;
+}
+#player .overlays > div.section-end {
+  border: none;
+  opacity: 0;
+  -webkit-transition: all 1s;
+}
+#player .overlays > div.section-end .center {
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  height: auto;
+  font-size: 40px;
+  color: #FFFFFF;
+}
+#player .overlays > div.section-end:not(.ng-hide) {
+  opacity: 1;
+}
+#player .overlays > div.ng-hide-add,
+#player .overlays > div.ng-hide-remove {
+  display: -webkit-box !important;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box !important;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox !important;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex !important;
+  /* NEW - Chrome */
+  display: flex !important;
+}
+#player .overlays > div:not(.ng-hide) {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: auto;
+  z-index: 2000;
+}
+#player .overlays > div:not(.ng-hide).nobg {
+  Background: rgba(0, 0, 0, 0);
+}
+#player .overlays > div:not(.ng-hide) .action {
+  -webkit-transform: scale(1);
+  opacity: 1;
+  pointer-events: all !important;
+  font-size: 16px;
+}
+#player .overlays > div .action {
+  color: white;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: all 0.3s;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  z-index: 1500;
+}
+#player .overlays > div .action:hover {
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+#player .overlays > div .action.small {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  text-transform: none;
+}
+#player .overlays > div .action.green {
+  background: #27AE60;
+}
+#player .overlays > div .action.green:hover {
+  background: #2ECC71;
+}
+#more-info {
+  padding: 10px;
+  color: white;
+}
+#more-info .info-box {
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  -webkit-transform: translateY(-60px);
+  height: 0px;
+  font-size: 1.05em;
+  line-height: 1.6em;
+}
+#more-info .info-box video {
+  width: 100%;
+  height: auto;
+}
+#more-info .info-box.ng-hide-add,
+#more-info .info-box.ng-hide-remove {
+  display: block !important;
+}
+#more-info .info-box:not(.ng-hide) {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  height: auto;
+}
+#more-info .info-box:not(.ng-hide) h2 {
+  display: block;
+  color: #FFFFFF;
+}
+#more-info .info-box blockquote {
+  text-align: center;
+  display: block;
+  font-size: 1.4em;
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+  margin-bottom: 5px;
+  padding: 0px;
+  border: 0px;
+}
+#more-info h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 1.3em;
+  color: #FFFFFF;
+}
+#content {
+  padding: 10px;
+  color: white;
+  margin-top: -40px;
+  margin-bottom: 50px;
+}
+#content .quiz {
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+  -webkit-transform: translateY(-60px);
+  height: 0px;
+  z-index: 0;
+  width: 100%;
+  float: left;
+  position: relative;
+}
+#content .quiz.ng-hide-add,
+#content .quiz.ng-hide-remove {
+  display: block !important;
+}
+#content .quiz:not(.ng-hide) {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  height: auto;
+  z-index: 500;
+}
+#content .quiz .question {
+  transition: 1s;
+  -webkit-transition: 1s;
+  left: -1000px;
+  top: 80px;
+  opacity: 0;
+  position: absolute;
+  margin-bottom: 50px;
+}
+#content .quiz .question.ng-hide-add,
+#content .quiz .question.ng-hide-remove {
+  display: block !important;
+}
+#content .quiz .question:not(.ng-hide) {
+  left: 0px;
+  opacity: 1;
+}
+#content .quiz .correction {
+  opacity: 0;
+  transition: 1s;
+  -webkit-transition: 1s;
+  margin-right: -1000px;
+  position: relative;
+  float: right;
+  color: #27AE60;
+  margin-top: 35px;
+  z-index: 1;
+}
+#content .quiz .correction.ng-hide-add,
+#content .quiz .correction.ng-hide-remove {
+  display: block !important;
+}
+#content .quiz .correction:not(.ng-hide) {
+  opacity: 1;
+  position: relative;
+  float: right;
+  width: auto;
+  margin-right: 25px;
+  margin-top: 35px;
+  right: auto;
+  max-width: 64%;
+}
+#content h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.3em;
+  color: #FFFFFF;
+}
+.row {
+  width: 100%;
+  margin-bottom: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+  display: block;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.row .two-thirds,
+.row .one-third,
+.row .half {
+  box-sizing: border-box;
+  padding-right: 5%;
+  vertical-align: top;
+}
+.row .two-thirds {
+  width: 66%;
+  display: inline-block;
+}
+.row .one-third {
+  width: 33%;
+  display: inline-block;
+}
+.row .half {
+  width: 49%;
+  display: inline-block;
+}
+.row .last {
+  padding-right: 0px;
+}
+.quiz input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+.quiz input {
+  border: 1px solid grey;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  width: 100%;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.8em;
+  z-index: 1000;
+}
+.quiz input.greenHighlight {
+  border-color: #27AE60;
+}
+.quiz input:hover,
+.quiz input:focus {
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.3);
+}
+.quiz input[type=checkbox] {
+  display: none;
+}
+.quiz label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 15px;
+  margin-bottom: 7px;
+  font-size: 0.9em;
+  -webkit-user-select: none;
+  line-height: 20px;
+}
+.quiz label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  position: absolute;
+  left: 0;
+  bottombottom: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+.quiz input[type=checkbox]:checked + label:before {
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  color: #f3f3f3;
+  text-align: center;
+  line-height: 20px;
+}
+.quiz button.submit,
+.quiz button.correct,
+.quiz button.incorrect,
+.quiz button.incorrect-try-again {
+  border: 0px;
+  outline: 0px;
+  background-color: #27AE60;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 25px;
+  border-radius: 3px;
+  display: block;
+  cursor: pointer;
+  float: right;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 30px 0;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+.quiz button.submit:hover,
+.quiz button.correct:hover,
+.quiz button.incorrect:hover,
+.quiz button.incorrect-try-again:hover {
+  background-color: #2ECC71;
+}
+.quiz button.incorrect,
+.quiz button.incorrect-try-again {
+  background-color: #A72336;
+}
+.quiz button.incorrect:hover,
+.quiz button.incorrect-try-again:hover {
+  background-color: #8B0000;
+}

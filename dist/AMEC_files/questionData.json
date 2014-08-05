@@ -1,0 +1,1 @@
+var questionDataFile = {"currentQuiz":0,"currentQuestion":0,"currentShow":0,"nextQuiz":0,"finishTime":500,"questionArray":[{"title":"Exercise 1","type": "text","name":"quiz1","times":{"start":0,"finish":5},"questions":[{"answers":{"0":"123","1":"123"},"listValues":{},"type":"text","model":"Question 1","collection":false,"explanation":"test","correction":"test","time":5}]}]}

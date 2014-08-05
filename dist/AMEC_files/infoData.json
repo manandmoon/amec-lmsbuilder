@@ -1,0 +1,1 @@
+var infoArrayDataFile = [{"text":"test","times":{"start":5,"finish":10},"isShown":false},{"text":"test1","times":{"start":11,"finish":16},"isShown":false},{"text":"test2","times":{"start":20,"finish":25},"isShown":false}]
